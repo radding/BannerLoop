@@ -1,4 +1,4 @@
-.home-banner {height:304px;width:900px;margin-top:0px;position:relative;margin-bottom:0px;z-index:-2;}
+.home-banner {height:304px;width:900px;margin-top:0px;position:relative;margin-bottom:0px;/*z-index:-2;*/ display: block;}
 .home-banner>ul {list-style-type:none;margin:0;padding:0;width:900px;height:304px;position:absolute;overflow:hidden;}
 .home-banner>ul>li {height:304px;float:left;width:150px;padding:0;display:none;}
 .home-banner>ul>li.li-one {background-position:0 0;}
@@ -7,9 +7,5 @@
 .home-banner>ul>li.li-four {background-position:-450px 0;}
 .home-banner>ul>li.li-five {background-position:-600px 0;}
 .home-banner>ul>li.li-six {background-position:-750px 0;}
-
-./*banner-1>li {background-image:url(/renderfile/bf83094223090acc5c46a4fad11bc554/_HITObjects/static/images/homepage/splash_01.jpg);}
-.banner-2>li {background-image:url(/renderfile/bf83094223090acc5c46a4fad11bc554/_HITObjects/static/images/homepage/splash_02.jpg);}
-.banner-3>li {background-image:url(/renderfile/bf83094223090acc5c46a4fad11bc554/_HITObjects/static/images/homepage/splash_03.jpg);}
-.banner-4>li {background-image:url(/renderfile/bf83094223090acc5c46a4fad11bc554/_HITObjects/static/images/homepage/splash_04.jpg);}
-.banner-5>li {background-image:url(/renderfile/bf83094223090acc5c46a4fad11bc554/_HITObjects/static/images/homepage/splash_05.jpg);}*/
+#left{background-image:url("images/arrowSlideshowLeft.png");z-index:2;width: 40px; height: 75px; position: relative; left: 0%}
+.home-banner .right{background-image:url("images/arrowSlideshowRight.png");z-index:2;width: 40px; height: 75px; position: relative; right: 0%; float: right;}
