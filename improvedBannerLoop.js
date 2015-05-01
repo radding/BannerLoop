@@ -123,13 +123,14 @@ BannerManager.prototype.skipTo = function(number) {
 }
 
 BannerManager.prototype.transition = function(direction) {
+	if(this.bannerImgs.length == 1 && this.currentDisp) return;
 	window.lock = true;
 	var me = this;
 	if(typeof direction === "undefined" || direction === "forward"){
 		this.position = (this.position+1)%this.bannerImgs.length;
 		window.hide = this.currentDisp;
 		
-		this.currentDisp = this.bannerImgs[this.position];
+		this.currentDisp = this.bannerImgs[Math.abs(this.position)];
 		this.currentDisp.show();
 		if(hide !== null){
 			// hide.hide();
@@ -141,7 +142,7 @@ BannerManager.prototype.transition = function(direction) {
 		window.hide = this.currentDisp;
 		var me = this;
 		this.position = (this.position-1)%this.bannerImgs.length;
-		this.currentDisp = this.bannerImgs[this.position];
+		this.currentDisp = this.bannerImgs[Math.abs(this.position)];
 		this.currentDisp.show();
 		if(hide !== null){
 			// this.bannerImgs.unshift(hide);
